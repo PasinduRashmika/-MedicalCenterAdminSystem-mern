@@ -1,12 +1,15 @@
-export const primaryFont = '"Roboto Mono", monospace';
+export const primaryFont = '"Roboto", sans-serif';
 
+//can use the 1rem values
 export const typeScale = {
-  header1: "1.8rem",
-  header2: "1.6rem",
-  header3: "1.4rem",
-  header4: "1.2rem",
-  header5: "1.1rem",
-  paragraph: "1rem",
-  helperText: "0.8rem",
-  copyrightText: "0.7rem",
+  default: 12,
+  h1: 40,
+  h2: 32,
+  h3: 24,
+  h4: 20,
+  h5: 16,
+  h6: 14,
+  paragraph: 12,
+  helperText: 11,
+  copyrightText: 10,
 };

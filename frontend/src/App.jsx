@@ -1,10 +1,11 @@
-import PrimaryButton, {
-  SecondaryButton,
-  TertiaryButton,
-} from "./components/Button/Button";
 import { GlobalStyle } from "./utils/Global";
 import { ColorModeContext, useMode } from "./utils/theme";
 import { CssBaseline, ThemeProvider } from "@mui/material";
+import { Routes, Route } from "react-router-dom";
+import Home from "./Pages/Home";
+import Login from "./Pages/Login";
+import Staff from "./Pages/Staff";
+import TopBar from "./components/Topbar/TopBar";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -13,12 +14,15 @@ function App() {
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
+        <GlobalStyle />
         <div className="app">
           <main className="content">
-            <PrimaryButton>Primary Button</PrimaryButton>
-            <SecondaryButton> Secondary Button</SecondaryButton>
-            <TertiaryButton> Tertiary Button</TertiaryButton>
-            <GlobalStyle />
+            <TopBar />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/staff" element={<Staff />} />
+            </Routes>
           </main>
         </div>
       </ThemeProvider>

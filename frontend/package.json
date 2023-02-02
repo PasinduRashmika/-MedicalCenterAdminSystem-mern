@@ -13,6 +13,7 @@
     "test:watch": "vitest --watch"
   },
   "dependencies": {
+    "@mui/icons-material": "^5.11.0",
     "@reduxjs/toolkit": "^1.9.2",
     "polished": "^4.2.2",
     "react": "^18.2.0",

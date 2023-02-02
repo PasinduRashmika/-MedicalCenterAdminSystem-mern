@@ -1,5 +1,5 @@
 export * from "./colors";
-export * from "./themes";
+export * from "./theme";
 export * from "./typography";
 
 //other wise you need to import from each file
